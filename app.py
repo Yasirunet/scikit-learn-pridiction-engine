@@ -10,7 +10,7 @@ def test():
 	test_list = [5,2,3,0]
 	get_pre = clf.predict([test_list])
 	pre = get_pre[0]
-	return pre
+	print (pre)
 
 if __name__ == '__main__':
 	app.run()
