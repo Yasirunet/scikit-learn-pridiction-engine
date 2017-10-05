@@ -5,7 +5,7 @@ from sklearn.externals import joblib
 
 app = Flask(__name__)
 
-clf = joblib.load('modle.pkl')
+#clf = joblib.load()
 
 @app.route('/')
 def test():
@@ -18,4 +18,5 @@ def test():
 
 	
 if __name__ == '__main__':
-	app.run()
+    clf = joblib.load('modle.pkl')
+    app.run()
