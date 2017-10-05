@@ -8,7 +8,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def test():
-	clf = joblib.load('modle.pkl')
+	clf = joblib.load('model.pkl')
+	
 	
 	test_list = [5,3,2,0]
 	get_pre = clf.predict([test_list])
