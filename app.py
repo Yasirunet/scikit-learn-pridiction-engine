@@ -9,8 +9,8 @@ app = Flask(__name__)
 @app.route('/')
 def test():
     import another_module
-    return another_module.main()
-
+    var = another_module.main()
+    return var
 	
 if __name__ == '__main__':
     app.run()

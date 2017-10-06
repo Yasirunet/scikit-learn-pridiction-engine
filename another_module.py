@@ -3,7 +3,7 @@ from sklearn.externals import joblib
 from sklearn import datasets
 from sklearn.neighbors import KNeighborsClassifier
 
-#clf = joblib.load('model2.pkl')
+clf1 = joblib.load('model2.pkl')
 
 
 def main():
@@ -13,13 +13,15 @@ def main():
     x = iris.data
     y = iris.target
 	
-    knn = KNeighborsClassifier()
-    clf = knn.fit(x,y)
+    clf1 = joblib.load('model2.pkl')
+
+    #knn = KNeighborsClassifier()
+    #clf = knn.fit(x,y)
     test_list = [10,3,2,10]
 	
-    get_pre = clf.predict([test_list])
+    get_pre = clf1.predict([test_list])
     pre = get_pre[0]
-	 
+	
     pred1 = iris.target_names[pre]
     return pred1
 #print(get_value())
