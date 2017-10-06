@@ -3,7 +3,7 @@ from sklearn.externals import joblib
 from sklearn import datasets
 from sklearn.neighbors import KNeighborsClassifier
 
-clf1 = joblib.load('model2.pkl')
+#clf1 = joblib.load('model2.pkl')
 
 
 def main():
