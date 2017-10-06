@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-from sklearn.externals import joblib
+#from sklearn.externals import joblib
+import joblib
 clf = joblib.load('model.pkl')
 
 
@@ -9,7 +10,7 @@ def get_value(*args):
 	get_pre = clf.predict([test_list])
 	pre = get_pre[0]
 	
-        return "Hello World " + ":".join(map(str, args))
+        return  pre + ":".join(map(str, args))
 
 def main(argv):
     print(get_value(*argv[1:]))
