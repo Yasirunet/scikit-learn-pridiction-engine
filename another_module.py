@@ -12,14 +12,13 @@ def main():
 
     x = iris.data
     y = iris.target
-	
-    clf1 = joblib.load('model2.pkl')
 
-    #knn = KNeighborsClassifier()
-    #clf = knn.fit(x,y)
+
+    knn = KNeighborsClassifier()
+    clf = knn.fit(x,y)
     test_list = [10,3,2,10]
 	
-    get_pre = clf1.predict([test_list])
+    get_pre = clf.predict([test_list])
     pre = get_pre[0]
 	
     pred1 = iris.target_names[pre]
