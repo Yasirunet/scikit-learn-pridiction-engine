@@ -3,7 +3,7 @@ from sklearn.externals import joblib
 from sklearn import datasets
 #from sklearn.neighbors import KNeighborsClassifier
 
-clf = joblib.load('model1.pkl')
+clf = joblib.load('model2.pkl')
 
 
 def main():
@@ -20,8 +20,8 @@ def main():
     get_pre = clf.predict([test_list])
     pre = get_pre[0]
 	 
-    #pred1 = iris.target_names[pre]
-    return pre
+    pred1 = iris.target_names[pre]
+    return pred1
 #print(get_value())
 
 
