@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from sklearn.externals import joblib
 
-clf = joblib.load('model.pkl')
+clf = joblib.load('model1.pkl')
 
 
 def get_value(*args):
