@@ -1,6 +1,4 @@
 scipy
 numpy
-bitarray
-reportlab
 pandas
 scikit-learn
