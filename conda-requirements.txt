@@ -3,4 +3,4 @@ numpy
 bitarray
 reportlab
 pandas
-sklearn
+scikit-learn
