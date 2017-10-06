@@ -8,10 +8,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def test():
- 	import another_module
-	value = another_module.get_value(34)
-	return value
-
+    import another_module
+    return another_module.main()
 
 	
 if __name__ == '__main__':

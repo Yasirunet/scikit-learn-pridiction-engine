@@ -1,20 +1,29 @@
 #!/usr/bin/env python
-from sklearn.externals import joblib
+#from sklearn.externals import joblib
+from sklearn import datasets
+from sklearn.neighbors import KNeighborsClassifier
 
-clf = joblib.load('model1.pkl')
+#clf = joblib.load('model1.pkl')
 
 
-def get_value(*args):
-	test_list = [5,3,2,0]
+def main():
+
+    iris = datasets.load_iris()
+
+    x = iris.data
+    y = iris.target
 	
-	get_pre = clf.predict([test_list])
-	pre = get_pre[0]
+    knn = KNeighborsClassifier()
+    clf = knn.fit(x,y)
+    test_list = [10,3,2,10]
 	
-        return  pre + ":".join(map(str, args))
+    get_pre = clf.predict([test_list])
+    pre = get_pre[0]
+	 
+    pred1 = iris.target_names[pre]
+    return pred1
+#print(get_value())
 
-def main(argv):
-    print(get_value(*argv[1:]))
 
 if __name__ == "__main__":
-    import sys
-    main(sys.argv)
+    main()
