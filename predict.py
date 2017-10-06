@@ -7,4 +7,3 @@
 #	get_pre = clf.predict([test_list])
 #	pre = get_pre[0]
 #	return pre
-
