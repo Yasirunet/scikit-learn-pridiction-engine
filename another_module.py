@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-#from sklearn.externals import joblib
-import joblib
+from sklearn.externals import joblib
+
 clf = joblib.load('model.pkl')
 
 
