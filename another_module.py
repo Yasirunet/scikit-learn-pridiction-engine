@@ -6,8 +6,9 @@ from sklearn.neighbors import KNeighborsClassifier
 #clf1 = joblib.load('model2.pkl')
 
 
-def main():
-
+def main(arg):
+    #b = test_list 
+    arg1 = str(arg)
     iris = datasets.load_iris()
 
     x = iris.data
@@ -22,9 +23,10 @@ def main():
     pre = get_pre[0]
 	
     pred1 = iris.target_names[pre]
-    return pred1
+    text = pred1 + arg1
+    return text
 #print(get_value())
 
 
 if __name__ == "__main__":
-    main()
+    main(b)
