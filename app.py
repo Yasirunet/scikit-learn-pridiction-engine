@@ -1,4 +1,4 @@
-from flask import Flask 
+from flask import Flask, jsonify ,request
 #from sklearn.externals import joblib
 
 
@@ -6,12 +6,20 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/',methods=['POST'])
 def test():
-    import another_module
-    a = 35
-    var = another_module.main(a)
-    return var
+	#restfull service
+	##get value from json reqvest
+	data = request.get_json()
+	name = data['name']
+	test_list = data['val']
+	##get pridictions from model
+	import another_module
+        a = test_list
+        var = another_module.main(a)
+ 	#return values
+	return jsonify({'request_stat':'success!','name':name , 'your valuues': test_list ,'prediction':var})
+
 	
 if __name__ == '__main__':
     app.run()

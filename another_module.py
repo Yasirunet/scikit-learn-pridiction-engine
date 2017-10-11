@@ -8,7 +8,7 @@ from sklearn.neighbors import KNeighborsClassifier
 
 def main(arg):
     #b = test_list 
-    arg1 = str(arg)
+    #arg1 = str(arg)
     iris = datasets.load_iris()
 
     x = iris.data
@@ -17,13 +17,13 @@ def main(arg):
 
     knn = KNeighborsClassifier()
     clf = knn.fit(x,y)
-    test_list = [10,3,2,10]
+    test_list = arg
 	
     get_pre = clf.predict([test_list])
     pre = get_pre[0]
 	
     pred1 = iris.target_names[pre]
-    text = pred1 + arg1
+    text = pred1 
     return text
 #print(get_value())
 
