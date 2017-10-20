@@ -23,7 +23,7 @@ def main(arg):
 	
     get_pre = clf.predict([test_list])
     pre = get_pre[0]
-
+    
     pred1 = iris.target_names[pre]
     text = pred1 
     return text
