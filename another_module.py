@@ -2,7 +2,7 @@
 from sklearn.externals import joblib
 from sklearn import datasets
 from sklearn.neighbors import KNeighborsClassifier
-import pickle
+
 
 #clf1 = joblib.load('model2.pkl')
 
@@ -12,16 +12,13 @@ def main(arg):
     #arg1 = str(arg)
     iris = datasets.load_iris()
 
-    ##x = iris.data
-    ##y = iris.target
+    x = iris.data
+    y = iris.target
 
 
-    ##knn = KNeighborsClassifier()
-    ##clf = knn.fit(x,y)
-    #new code here
-    with open('modelfile.pkl','rb') as f :
-    	clf = pickle.load(f)
-    #new code here
+    knn = KNeighborsClassifier()
+    clf = knn.fit(x,y)
+    
     test_list = arg
 	
     get_pre = clf.predict([test_list])
