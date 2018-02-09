@@ -11,5 +11,5 @@ pip install Flask
 ```
 
 use conda build pack for install dependencies
-s
+
 
