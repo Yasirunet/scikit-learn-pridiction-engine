@@ -1,8 +1,8 @@
-#Scikit learn Simple POC pridiction Engine.
+# Scikit learn Simple POC pridiction Engine.
 
 This is a simple implementation of how machine-learning pridiction engine work using sci-kit learning and flask.
 
-##Dependencies
+## Dependencies
 
 ```
 pip install numpy
