@@ -14,6 +14,14 @@ pip install Flask
 
 use conda build pack for install dependencies.
 
+Deploy this files to heroku cloud using heroku cli.
+
+## Test the API
+
+Test Rest web service using "postman".
+
+![Postman screenshot](../master/images-readme/api-sample.jpg?raw=true "Title")
+
 
 
 
