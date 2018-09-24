@@ -5,7 +5,7 @@ This is a simple implementation of how machine-learning pridiction engine work u
 ## Dependencies
 
 ```
-pip install requirement.txt
+pip install requirements.txt
 ```
 
 use conda build pack for install dependencies.
